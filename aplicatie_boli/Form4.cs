@@ -26,7 +26,7 @@ namespace aplicatie_boli
 
         private void maskedTextBox_BirthDate_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-
+            
         }
     }
 }
