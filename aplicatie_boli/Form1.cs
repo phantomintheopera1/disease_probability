@@ -22,14 +22,19 @@ namespace aplicatie_boli
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+        private void button1_login_Click(object sender, EventArgs e)
+        {
+            Form2_login login = new Form2_login();
+            this.Hide();
+            login.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_register_Click(object sender, EventArgs e)
         {
-
+            Form3_register register = new Form3_register();
+            this.Hide();
+            register.Show();
         }
     }
 }

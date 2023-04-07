@@ -1,6 +1,6 @@
 ﻿namespace aplicatie_boli
 {
-    partial class Form4
+    partial class Form4_register
     {
         /// <summary>
         /// Required designer variable.
@@ -28,84 +28,151 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4_register));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_BirthDate = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonFinish = new System.Windows.Forms.Button();
+            this.textBox_FirstName = new System.Windows.Forms.TextBox();
+            this.textBox_LastName = new System.Windows.Forms.TextBox();
+            this.textBox_MedicalHistory = new System.Windows.Forms.TextBox();
+            this.labelRegister = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 32);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label1.Location = new System.Drawing.Point(153, 83);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.Size = new System.Drawing.Size(100, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "First name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 83);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label2.Location = new System.Drawing.Point(158, 115);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 16);
+            this.label2.Size = new System.Drawing.Size(95, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Last name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 130);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label3.Location = new System.Drawing.Point(11, 154);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 16);
+            this.label3.Size = new System.Drawing.Size(252, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Birth Date(DD/MM/YYYY)";
             // 
-            // maskedTextBox1
+            // maskedTextBox_BirthDate
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(242, 127);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox_BirthDate.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox_BirthDate.Location = new System.Drawing.Point(267, 158);
+            this.maskedTextBox_BirthDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTextBox_BirthDate.Mask = "00/00/0000";
+            this.maskedTextBox_BirthDate.Name = "maskedTextBox_BirthDate";
+            this.maskedTextBox_BirthDate.Size = new System.Drawing.Size(100, 24);
+            this.maskedTextBox_BirthDate.TabIndex = 3;
+            this.maskedTextBox_BirthDate.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox_BirthDate.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox_BirthDate_MaskInputRejected);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 177);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label4.Location = new System.Drawing.Point(121, 199);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(231, 16);
+            this.label4.Size = new System.Drawing.Size(141, 24);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Medical history we should know about";
+            this.label4.Text = "Medical history";
             // 
-            // button1
+            // buttonFinish
             // 
-            this.button1.Location = new System.Drawing.Point(367, 301);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "FINISH";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonFinish.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFinish.Location = new System.Drawing.Point(500, 254);
+            this.buttonFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonFinish.Name = "buttonFinish";
+            this.buttonFinish.Size = new System.Drawing.Size(81, 27);
+            this.buttonFinish.TabIndex = 5;
+            this.buttonFinish.Text = "FINISH";
+            this.buttonFinish.UseVisualStyleBackColor = true;
+            this.buttonFinish.Click += new System.EventHandler(this.buttonFinish_Click);
             // 
-            // Form4
+            // textBox_FirstName
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.textBox_FirstName.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_FirstName.Location = new System.Drawing.Point(267, 87);
+            this.textBox_FirstName.Name = "textBox_FirstName";
+            this.textBox_FirstName.Size = new System.Drawing.Size(224, 24);
+            this.textBox_FirstName.TabIndex = 6;
+            // 
+            // textBox_LastName
+            // 
+            this.textBox_LastName.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_LastName.Location = new System.Drawing.Point(267, 119);
+            this.textBox_LastName.Name = "textBox_LastName";
+            this.textBox_LastName.Size = new System.Drawing.Size(224, 24);
+            this.textBox_LastName.TabIndex = 7;
+            // 
+            // textBox_MedicalHistory
+            // 
+            this.textBox_MedicalHistory.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_MedicalHistory.Location = new System.Drawing.Point(267, 203);
+            this.textBox_MedicalHistory.Name = "textBox_MedicalHistory";
+            this.textBox_MedicalHistory.Size = new System.Drawing.Size(297, 24);
+            this.textBox_MedicalHistory.TabIndex = 8;
+            // 
+            // labelRegister
+            // 
+            this.labelRegister.AutoSize = true;
+            this.labelRegister.BackColor = System.Drawing.Color.Transparent;
+            this.labelRegister.Font = new System.Drawing.Font("Bell MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.labelRegister.Location = new System.Drawing.Point(267, 28);
+            this.labelRegister.Name = "labelRegister";
+            this.labelRegister.Size = new System.Drawing.Size(122, 25);
+            this.labelRegister.TabIndex = 9;
+            this.labelRegister.Text = "REGISTER";
+            // 
+            // Form4_register
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(828, 483);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(705, 469);
+            this.Controls.Add(this.labelRegister);
+            this.Controls.Add(this.textBox_MedicalHistory);
+            this.Controls.Add(this.textBox_LastName);
+            this.Controls.Add(this.textBox_FirstName);
+            this.Controls.Add(this.buttonFinish);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTextBox_BirthDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form4";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Form4_register";
             this.Text = "REGISTER";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,8 +184,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_BirthDate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonFinish;
+        private System.Windows.Forms.TextBox textBox_FirstName;
+        private System.Windows.Forms.TextBox textBox_LastName;
+        private System.Windows.Forms.TextBox textBox_MedicalHistory;
+        private System.Windows.Forms.Label labelRegister;
     }
 }
