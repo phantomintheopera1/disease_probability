@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aplicatie_boli.DiseaseProbabilityDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,6 @@ namespace aplicatie_boli
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
         }
 
 
@@ -36,6 +36,11 @@ namespace aplicatie_boli
             Form3_register register = new Form3_register();
             this.Hide();
             register.Show();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

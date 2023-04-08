@@ -1,7 +1,9 @@
-﻿using System;
+﻿using aplicatie_boli.DiseaseProbabilityDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,6 +22,50 @@ namespace aplicatie_boli
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form2_login_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void button2_login_Click(object sender, EventArgs e)
+        {
+            string enteredUsername = textBox2_username.Text;
+            string enteredPassword = textBox2_password.Text;
+            UserTableAdapter userTA = new UserTableAdapter();
+            DiseaseProbabilityDataSet dataSet = new DiseaseProbabilityDataSet();
+            userTA.Fill(dataSet.User);
+            var rows = dataSet.User.Select("Username = '" + enteredUsername + "'");
+            if (rows.Length == 0)
+            {
+                MessageBox.Show("There is no account with these credentials!");
+                textBox2_username.Text = "";
+                textBox2_password.Text = "";
+                Form3_register f = new Form3_register();
+                this.Hide();
+                f.Show();
+            }
+            else
+            {
+                foreach(var row in rows)
+                {
+                    if (row["Password"].ToString() != enteredPassword)
+                        MessageBox.Show("Wrong password!");
+                    else
+                    {
+                        //link to app form
+                    }
+
+                }
+            }
+                
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

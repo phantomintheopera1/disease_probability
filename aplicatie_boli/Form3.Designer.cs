@@ -37,10 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3_username = new System.Windows.Forms.TextBox();
             this.textBox3_email = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3_password = new System.Windows.Forms.TextBox();
+            this.textBox3_confirmPassword = new System.Windows.Forms.TextBox();
             this.buttonNext = new System.Windows.Forms.Button();
             this.labelRegister = new System.Windows.Forms.Label();
+            this.buttonClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +105,7 @@
             // 
             this.textBox3_username.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3_username.Location = new System.Drawing.Point(237, 74);
-            this.textBox3_username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3_username.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3_username.Name = "textBox3_username";
             this.textBox3_username.Size = new System.Drawing.Size(288, 24);
             this.textBox3_username.TabIndex = 4;
@@ -113,36 +114,36 @@
             // 
             this.textBox3_email.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3_email.Location = new System.Drawing.Point(237, 128);
-            this.textBox3_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3_email.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3_email.Name = "textBox3_email";
             this.textBox3_email.Size = new System.Drawing.Size(288, 24);
             this.textBox3_email.TabIndex = 5;
             // 
-            // textBox1
+            // textBox3_password
             // 
-            this.textBox1.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(237, 181);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(288, 24);
-            this.textBox1.TabIndex = 6;
+            this.textBox3_password.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3_password.Location = new System.Drawing.Point(237, 181);
+            this.textBox3_password.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3_password.Name = "textBox3_password";
+            this.textBox3_password.PasswordChar = '*';
+            this.textBox3_password.Size = new System.Drawing.Size(288, 24);
+            this.textBox3_password.TabIndex = 6;
             // 
-            // textBox2
+            // textBox3_confirmPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(237, 236);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(288, 24);
-            this.textBox2.TabIndex = 7;
+            this.textBox3_confirmPassword.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3_confirmPassword.Location = new System.Drawing.Point(237, 236);
+            this.textBox3_confirmPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3_confirmPassword.Name = "textBox3_confirmPassword";
+            this.textBox3_confirmPassword.PasswordChar = '*';
+            this.textBox3_confirmPassword.Size = new System.Drawing.Size(288, 24);
+            this.textBox3_confirmPassword.TabIndex = 7;
             // 
             // buttonNext
             // 
             this.buttonNext.Font = new System.Drawing.Font("Bell MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNext.Location = new System.Drawing.Point(405, 289);
-            this.buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(97, 42);
             this.buttonNext.TabIndex = 8;
@@ -162,23 +163,35 @@
             this.labelRegister.TabIndex = 9;
             this.labelRegister.Text = "REGISTER";
             // 
+            // buttonClose
+            // 
+            this.buttonClose.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.Location = new System.Drawing.Point(565, 398);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(98, 37);
+            this.buttonClose.TabIndex = 10;
+            this.buttonClose.Text = "CLOSE";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // Form3_register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(705, 469);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.labelRegister);
             this.Controls.Add(this.buttonNext);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox3_confirmPassword);
+            this.Controls.Add(this.textBox3_password);
             this.Controls.Add(this.textBox3_email);
             this.Controls.Add(this.textBox3_username);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form3_register";
             this.Text = "REGISTER";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -191,8 +204,8 @@
 
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button buttonNext;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3_confirmPassword;
+        private System.Windows.Forms.TextBox textBox3_password;
         private System.Windows.Forms.TextBox textBox3_email;
         private System.Windows.Forms.TextBox textBox3_username;
         private System.Windows.Forms.Label label4;
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelRegister;
+        private System.Windows.Forms.Button buttonClose;
     }
 }

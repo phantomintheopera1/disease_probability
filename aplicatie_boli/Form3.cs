@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aplicatie_boli.DiseaseProbabilityDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,63 @@ namespace aplicatie_boli
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            Form4_register cont = new Form4_register();
-            this.Hide();
-            cont.Show();
+            if(textBox3_username.Text.Length < 5)
+            {
+                MessageBox.Show("The username must have at least 5 characters!");
+                textBox3_username.Text = "";
+            }
+            else if((textBox3_email.Text.IndexOf('@') == -1) || (textBox3_email.Text.IndexOf('@') != -1 && textBox3_email.Text.IndexOf('.', textBox3_email.Text.IndexOf('@')) == -1))
+            {
+                MessageBox.Show("The email is not valid!");
+                textBox3_email.Text = "";
+            }
+            else if(textBox3_password.Text.Length < 6)
+            {
+                MessageBox.Show("The password must have at least 6 characters!");
+                textBox3_password.Text = "";
+                textBox3_confirmPassword.Text = "";
+            }
+            else if(textBox3_password.Text != textBox3_confirmPassword.Text)
+            {
+                MessageBox.Show("The passwords are not the same!");
+                textBox3_confirmPassword.Text = "";
+            }
+            else
+            {
+                DiseaseProbabilityDataSet dataSet = new DiseaseProbabilityDataSet();
+                UserTableAdapter userTA = new UserTableAdapter();
+                userTA.Fill(dataSet.User);
+                var rows = dataSet.User.Select("Username = '" + textBox3_username.Text + "'");
+                if(rows.Length > 0)
+                {
+                    MessageBox.Show("This username is not available!");
+                    textBox3_username.Text = "";
+                }
+                else
+                {
+                    rows = dataSet.User.Select("Email = '" + textBox3_email.Text + "'");
+                    if(rows.Length > 0)
+                    {
+                        MessageBox.Show("There already is an account with this email!");
+                        textBox3_email.Text = "";
+                    }
+                    else
+                    {
+                        DateTime temp = new DateTime();
+                        userTA.Insert(textBox3_username.Text, textBox3_email.Text, textBox3_password.Text, "", "", temp, "");
+                        Form4_register cont = new Form4_register(textBox3_username.Text);
+                        this.Hide();
+                        cont.Show();
+                    }
+                }
+            }
+            
+            
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
