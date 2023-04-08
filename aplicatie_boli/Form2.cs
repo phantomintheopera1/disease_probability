@@ -49,16 +49,15 @@ namespace aplicatie_boli
             }
             else
             {
-                foreach(var row in rows)
+                var row = rows[0];
+                if (row["Password"].ToString() != enteredPassword)
+                    MessageBox.Show("Wrong password!");
+                else
                 {
-                    if (row["Password"].ToString() != enteredPassword)
-                        MessageBox.Show("Wrong password!");
-                    else
-                    {
-                        //link to app form
-                    }
-
+                    //link to app form
                 }
+
+                
             }
                 
         }
