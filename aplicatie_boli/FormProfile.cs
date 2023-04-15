@@ -29,7 +29,6 @@ namespace aplicatie_boli
             labelUsername.Text += rows[0]["Username"].ToString();
             labelName.Text += rows[0]["First name"].ToString() + " " + rows[0]["Last name"].ToString();
             labelBirth.Text += rows[0]["Birth date"].ToString();
-            labelMedical.Text += rows[0]["Medical history"].ToString();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
@@ -46,15 +45,12 @@ namespace aplicatie_boli
             buttonChangeUsername.Enabled = true;
             buttonChangeFullName.Enabled = true;
             buttonChangeBirthDate.Enabled = true;
-            buttonChangeMedicalHistory.Enabled = true;
             buttonChangeUsername.Visible = true;
             buttonChangeFullName.Visible = true;
             buttonChangeBirthDate.Visible = true;
-            buttonChangeMedicalHistory.Visible = true;
             labelUsername.Text = "Username: ";
             labelName.Text = "Full name: ";
             labelBirth.Text = "Birth date: ";
-            labelMedical.Text = "Medical history: ";
             buttonSave.Visible = true;
         }
 
@@ -80,14 +76,6 @@ namespace aplicatie_boli
             maskedTextBoxNewBirthDate.Visible = true;
             buttonUpdateBirthDate.Visible = true;
             maskedTextBoxNewBirthDate.Select();
-        }
-
-        private void buttonChangeMedicalHistory_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Please enter the new medical history!");
-            richTextBox1.Visible = true;
-            buttonUpdateMedicalHistory.Visible = true;
-            richTextBox1.Select();
         }
 
         private void buttonUpdateUsername_Click(object sender, EventArgs e)
@@ -184,23 +172,6 @@ namespace aplicatie_boli
             }
         }
 
-        private void buttonUpdateMedicalHistory_Click(object sender, EventArgs e)
-        {
-            DiseaseProbabilityDataSet dataSet = new DiseaseProbabilityDataSet();
-            UserTableAdapter userTA = new UserTableAdapter();
-            userTA.Fill(dataSet.User);
-            var rows = dataSet.User.Select("Id = " + ID);
-            if (richTextBox1.Text == "")
-                MessageBox.Show("Please enter the new medical history before pressing!");
-            else
-            {
-                rows[0]["Medical history"] = richTextBox1.Text;
-                userTA.Update(dataSet.User);
-                MessageBox.Show("Medical history updated succesfully!");
-                richTextBox1.Visible = false;
-                buttonUpdateMedicalHistory.Visible = false;
-            }
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

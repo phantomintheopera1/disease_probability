@@ -33,7 +33,7 @@ namespace aplicatie_boli
                 row["First name"] = textBox_FirstName.Text;
                 row["Last name"] = textBox_LastName.Text;
                 row["Birth date"] = result;
-                row["Medical history"] = textBox_MedicalHistory.Text;
+                row["Medical history"] = "";
                 userTA.Update(dataSet.User);
                 MessageBox.Show("Registered succesfully!");
                 Form2_login fl = new Form2_login();

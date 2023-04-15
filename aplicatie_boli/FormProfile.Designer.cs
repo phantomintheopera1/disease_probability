@@ -31,12 +31,10 @@
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelBirth = new System.Windows.Forms.Label();
-            this.labelMedical = new System.Windows.Forms.Label();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonChangeUsername = new System.Windows.Forms.Button();
             this.buttonChangeFullName = new System.Windows.Forms.Button();
             this.buttonChangeBirthDate = new System.Windows.Forms.Button();
-            this.buttonChangeMedicalHistory = new System.Windows.Forms.Button();
             this.buttonViewHistory = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.textBoxNewUsername = new System.Windows.Forms.TextBox();
@@ -46,8 +44,6 @@
             this.buttonUpdateName = new System.Windows.Forms.Button();
             this.maskedTextBoxNewBirthDate = new System.Windows.Forms.MaskedTextBox();
             this.buttonUpdateBirthDate = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.buttonUpdateMedicalHistory = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -87,18 +83,6 @@
             this.labelBirth.Size = new System.Drawing.Size(131, 29);
             this.labelBirth.TabIndex = 2;
             this.labelBirth.Text = "Birth date: ";
-            // 
-            // labelMedical
-            // 
-            this.labelMedical.AutoSize = true;
-            this.labelMedical.BackColor = System.Drawing.Color.Transparent;
-            this.labelMedical.Font = new System.Drawing.Font("Bell MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMedical.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelMedical.Location = new System.Drawing.Point(23, 186);
-            this.labelMedical.Name = "labelMedical";
-            this.labelMedical.Size = new System.Drawing.Size(190, 29);
-            this.labelMedical.TabIndex = 3;
-            this.labelMedical.Text = "Medical history: ";
             // 
             // buttonEdit
             // 
@@ -147,18 +131,6 @@
             this.buttonChangeBirthDate.UseVisualStyleBackColor = false;
             this.buttonChangeBirthDate.Visible = false;
             this.buttonChangeBirthDate.Click += new System.EventHandler(this.buttonChangeBirthDate_Click);
-            // 
-            // buttonChangeMedicalHistory
-            // 
-            this.buttonChangeMedicalHistory.BackColor = System.Drawing.Color.Transparent;
-            this.buttonChangeMedicalHistory.Enabled = false;
-            this.buttonChangeMedicalHistory.Location = new System.Drawing.Point(208, 186);
-            this.buttonChangeMedicalHistory.Name = "buttonChangeMedicalHistory";
-            this.buttonChangeMedicalHistory.Size = new System.Drawing.Size(101, 29);
-            this.buttonChangeMedicalHistory.TabIndex = 8;
-            this.buttonChangeMedicalHistory.UseVisualStyleBackColor = false;
-            this.buttonChangeMedicalHistory.Visible = false;
-            this.buttonChangeMedicalHistory.Click += new System.EventHandler(this.buttonChangeMedicalHistory_Click);
             // 
             // buttonViewHistory
             // 
@@ -262,32 +234,10 @@
             this.buttonUpdateBirthDate.Visible = false;
             this.buttonUpdateBirthDate.Click += new System.EventHandler(this.buttonUpdateBirthDate_Click);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(349, 186);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(269, 96);
-            this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.Visible = false;
-            // 
-            // buttonUpdateMedicalHistory
-            // 
-            this.buttonUpdateMedicalHistory.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateMedicalHistory.Location = new System.Drawing.Point(624, 216);
-            this.buttonUpdateMedicalHistory.Name = "buttonUpdateMedicalHistory";
-            this.buttonUpdateMedicalHistory.Size = new System.Drawing.Size(164, 57);
-            this.buttonUpdateMedicalHistory.TabIndex = 21;
-            this.buttonUpdateMedicalHistory.Text = "Update medical history";
-            this.buttonUpdateMedicalHistory.UseVisualStyleBackColor = true;
-            this.buttonUpdateMedicalHistory.Visible = false;
-            this.buttonUpdateMedicalHistory.Click += new System.EventHandler(this.buttonUpdateMedicalHistory_Click);
-            // 
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(472, 288);
+            this.buttonSave.Location = new System.Drawing.Point(477, 205);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(146, 42);
             this.buttonSave.TabIndex = 22;
@@ -316,8 +266,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.buttonUpdateMedicalHistory);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.buttonUpdateBirthDate);
             this.Controls.Add(this.maskedTextBoxNewBirthDate);
             this.Controls.Add(this.buttonUpdateName);
@@ -327,12 +275,10 @@
             this.Controls.Add(this.textBoxNewUsername);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.buttonViewHistory);
-            this.Controls.Add(this.buttonChangeMedicalHistory);
             this.Controls.Add(this.buttonChangeBirthDate);
             this.Controls.Add(this.buttonChangeFullName);
             this.Controls.Add(this.buttonChangeUsername);
             this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.labelMedical);
             this.Controls.Add(this.labelBirth);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelUsername);
@@ -349,12 +295,10 @@
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelBirth;
-        private System.Windows.Forms.Label labelMedical;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonChangeUsername;
         private System.Windows.Forms.Button buttonChangeFullName;
         private System.Windows.Forms.Button buttonChangeBirthDate;
-        private System.Windows.Forms.Button buttonChangeMedicalHistory;
         private System.Windows.Forms.Button buttonViewHistory;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.TextBox textBoxNewUsername;
@@ -364,8 +308,6 @@
         private System.Windows.Forms.Button buttonUpdateName;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxNewBirthDate;
         private System.Windows.Forms.Button buttonUpdateBirthDate;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button buttonUpdateMedicalHistory;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button button1;
     }

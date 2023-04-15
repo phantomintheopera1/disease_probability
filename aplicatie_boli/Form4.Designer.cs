@@ -33,11 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.maskedTextBox_BirthDate = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.buttonFinish = new System.Windows.Forms.Button();
             this.textBox_FirstName = new System.Windows.Forms.TextBox();
             this.textBox_LastName = new System.Windows.Forms.TextBox();
-            this.textBox_MedicalHistory = new System.Windows.Forms.TextBox();
             this.labelRegister = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -93,23 +91,10 @@
             this.maskedTextBox_BirthDate.ValidatingType = typeof(System.DateTime);
             this.maskedTextBox_BirthDate.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox_BirthDate_MaskInputRejected);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label4.Location = new System.Drawing.Point(121, 199);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 24);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Medical history";
-            // 
             // buttonFinish
             // 
             this.buttonFinish.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFinish.Location = new System.Drawing.Point(500, 254);
+            this.buttonFinish.Location = new System.Drawing.Point(420, 221);
             this.buttonFinish.Margin = new System.Windows.Forms.Padding(2);
             this.buttonFinish.Name = "buttonFinish";
             this.buttonFinish.Size = new System.Drawing.Size(81, 27);
@@ -133,14 +118,6 @@
             this.textBox_LastName.Name = "textBox_LastName";
             this.textBox_LastName.Size = new System.Drawing.Size(224, 24);
             this.textBox_LastName.TabIndex = 7;
-            // 
-            // textBox_MedicalHistory
-            // 
-            this.textBox_MedicalHistory.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_MedicalHistory.Location = new System.Drawing.Point(267, 203);
-            this.textBox_MedicalHistory.Name = "textBox_MedicalHistory";
-            this.textBox_MedicalHistory.Size = new System.Drawing.Size(297, 24);
-            this.textBox_MedicalHistory.TabIndex = 8;
             // 
             // labelRegister
             // 
@@ -173,11 +150,9 @@
             this.ClientSize = new System.Drawing.Size(705, 469);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.labelRegister);
-            this.Controls.Add(this.textBox_MedicalHistory);
             this.Controls.Add(this.textBox_LastName);
             this.Controls.Add(this.textBox_FirstName);
             this.Controls.Add(this.buttonFinish);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.maskedTextBox_BirthDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -199,11 +174,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_BirthDate;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonFinish;
         private System.Windows.Forms.TextBox textBox_FirstName;
         private System.Windows.Forms.TextBox textBox_LastName;
-        private System.Windows.Forms.TextBox textBox_MedicalHistory;
         private System.Windows.Forms.Label labelRegister;
         private System.Windows.Forms.Button buttonClose;
     }
