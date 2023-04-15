@@ -34,3 +34,6 @@ C:\Users\Ionut B\Desktop\disease_prob1\aplicatie_boli\obj\Debug\aplicatie_boli.c
 C:\Users\Ionut B\Desktop\disease_prob1\aplicatie_boli\obj\Debug\aplicatie_boli.csproj.CoreCompileInputs.cache
 C:\Users\Ionut B\Desktop\disease_prob1\aplicatie_boli\obj\Debug\aplicatie_boli.exe
 C:\Users\Ionut B\Desktop\disease_prob1\aplicatie_boli\obj\Debug\aplicatie_boli.pdb
+C:\Users\Ionut B\Desktop\disease_prob1\aplicatie_boli\obj\Debug\aplicatie_boli.Form5.resources
+C:\Users\Ionut B\Desktop\disease_prob1\aplicatie_boli\obj\Debug\aplicatie_boli.FormProfile.resources
+C:\Users\Ionut B\Desktop\disease_prob1\aplicatie_boli\obj\Debug\aplicatie_boli.FormHistory.resources

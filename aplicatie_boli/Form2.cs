@@ -54,7 +54,12 @@ namespace aplicatie_boli
                     MessageBox.Show("Wrong password!");
                 else
                 {
-                    //link to app form
+                    /** Form5 f = new Form5();
+                     this.Hide();
+                     f.Show(); **/
+                    FormProfile f = new FormProfile(Int32.Parse(row["Id"].ToString()));
+                    this.Hide();
+                    f.Show();
                 }
 
                 
