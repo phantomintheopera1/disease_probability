@@ -52,7 +52,9 @@ namespace aplicatie_boli
         private void buttonClose_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Data (if any) will be saved and can be accessed by pressing \"View history of probabilities\" button from profile window");
-            Application.Exit();
+            FormProfile f = new FormProfile(ID);
+            this.Hide();
+            f.Show();
         }
 
         private void buttonDiagnostic_Click(object sender, EventArgs e)
@@ -79,7 +81,9 @@ namespace aplicatie_boli
                 if(common != 0)
                 {
                     found[k].disease = disease;
-                    found[k].probability = ((float)common / listofsymptoms.Length) * 100;
+                    float prob = ((float)common / listofsymptoms.Length) * 100;
+                    string formatted = prob.ToString("F" + 2);
+                    found[k].probability = float.Parse(formatted);
                     k++;
                 }
             }

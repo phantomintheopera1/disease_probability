@@ -62,7 +62,7 @@ namespace aplicatie_boli
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

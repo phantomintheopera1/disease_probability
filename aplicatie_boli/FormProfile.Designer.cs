@@ -253,7 +253,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 38);
             this.button1.TabIndex = 23;
-            this.button1.Text = "Close app";
+            this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

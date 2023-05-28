@@ -40,12 +40,14 @@ namespace aplicatie_boli
                         rows[j] = aux;
                     }
             for (int i = 0; i < rows.Length; i++)
-                dataGridView1.Rows.Add(rows[i]["Disease"].ToString(), rows[i]["Probability"].ToString() + "%");
+                dataGridView1.Rows.Add(rows[i]["Disease"].ToString(), float.Parse(rows[i]["Probability"].ToString()).ToString("F" + 2) + "%");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormProfile f = new FormProfile(ID);
+            this.Hide();
+            f.Show();
         }
     }
 }

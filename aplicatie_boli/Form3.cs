@@ -18,6 +18,17 @@ namespace aplicatie_boli
             InitializeComponent();
         }
 
+        string encrypt(string s)
+        {
+            char[] pass = s.ToCharArray();
+            for(int i = 0; i < pass.Length; i++)
+            {
+                pass[i] = (char)(pass[i] + i);
+            }
+            s = new string(pass);
+            return s;
+        }
+
         private void buttonNext_Click(object sender, EventArgs e)
         {
             if(textBox3_username.Text.Length < 5)
@@ -63,10 +74,11 @@ namespace aplicatie_boli
                     else
                     {
                         DateTime temp = new DateTime();
-                        userTA.Insert(textBox3_username.Text, textBox3_email.Text, textBox3_password.Text, "", "", temp, "");
+                        userTA.Insert(textBox3_username.Text, textBox3_email.Text, encrypt(textBox3_password.Text), "", "", temp, "");
                         Form4_register cont = new Form4_register(textBox3_username.Text);
                         this.Hide();
-                        cont.Show();
+                        cont.ShowDialog();
+                        
                     }
                 }
             }
@@ -76,7 +88,14 @@ namespace aplicatie_boli
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form1 f = new Form1();
+            this.Hide();
+            f.Show();
+        }
+
+        private void Form3_register_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

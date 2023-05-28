@@ -28,14 +28,16 @@ namespace aplicatie_boli
         {
             Form2_login login = new Form2_login();
             this.Hide();
-            login.Show();
+            login.ShowDialog();
+            
         }
 
         private void button1_register_Click(object sender, EventArgs e)
         {
             Form3_register register = new Form3_register();
             this.Hide();
-            register.Show();
+            register.ShowDialog();
+            
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

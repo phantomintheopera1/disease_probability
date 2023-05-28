@@ -170,7 +170,7 @@
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(98, 37);
             this.buttonClose.TabIndex = 10;
-            this.buttonClose.Text = "CLOSE";
+            this.buttonClose.Text = "CANCEL";
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
@@ -194,6 +194,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form3_register";
             this.Text = "REGISTER";
+            this.Load += new System.EventHandler(this.Form3_register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

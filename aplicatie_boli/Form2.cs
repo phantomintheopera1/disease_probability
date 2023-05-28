@@ -19,6 +19,15 @@ namespace aplicatie_boli
             InitializeComponent();
         }
 
+        string decrypt(string s)
+        {
+            char[] pass = s.ToCharArray();
+            for (int i = 0; i < pass.Length; i++)
+                pass[i] = (char)(pass[i] - i);
+            s = new string(pass);
+            return s;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -50,8 +59,12 @@ namespace aplicatie_boli
             else
             {
                 var row = rows[0];
-                if (row["Password"].ToString() != enteredPassword)
+                if (decrypt(row["Password"].ToString()) != enteredPassword)
+                {
                     MessageBox.Show("Wrong password!");
+                    textBox2_password.Text = "";
+                }
+                    
                 else
                 {
                     /** Form5 f = new Form5();
@@ -69,7 +82,10 @@ namespace aplicatie_boli
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form1 f = new Form1();
+            
+            this.Hide();
+            f.ShowDialog();
         }
     }
 }

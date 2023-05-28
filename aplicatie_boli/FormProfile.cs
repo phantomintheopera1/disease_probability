@@ -188,7 +188,9 @@ namespace aplicatie_boli
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form2_login f = new Form2_login();
+            this.Hide();
+            f.Show();
         }
 
         private void buttonViewHistory_Click(object sender, EventArgs e)
